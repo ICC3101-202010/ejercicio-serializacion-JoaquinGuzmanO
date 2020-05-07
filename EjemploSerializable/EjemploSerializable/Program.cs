@@ -19,11 +19,11 @@ namespace EjemploSerializable
                 string option = Console.ReadLine();
                 if (option == "1")
                 {
-                    Console.WriteLine("diga el nombre del empleado:");
+                    Console.WriteLine("diga el nombre:");
                     string name = Console.ReadLine();
-                    Console.WriteLine("diga el apellido del empleado:");
+                    Console.WriteLine("diga el apellido:");
                     string lastname = Console.ReadLine();
-                    Console.WriteLine("diga la edad del empleado:");
+                    Console.WriteLine("diga la edad:");
                     string age = Console.ReadLine();
                     int age1 = Int16.Parse(age);
                     Person person = new Person(name, lastname, age1);
@@ -31,14 +31,14 @@ namespace EjemploSerializable
                 }
                 if (option == "2")
                 {
-                    for (int j = 0; j <= person_l.Count(); j++)
+                    for (int j = 0; j < person_l.Count(); j++)
                     {
                         person_l[j].Information();
                     }
                 }
                 if (option == "3")
                 {
-                    for (int j = 0; j <= person_l.Count(); j++)
+                    for (int j = 0; j < person_l.Count(); j++)
                     {
                         IFormatter formatter = new BinaryFormatter();
                         Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);

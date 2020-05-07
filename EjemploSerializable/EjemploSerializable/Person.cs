@@ -6,7 +6,8 @@ using System.Runtime.Serialization;
 
 namespace EjemploSerializable
 {
-    [Serializable] public class Person 
+    [Serializable]
+    public class Person
     {
         private string name;
         private string lastname;
@@ -22,10 +23,9 @@ namespace EjemploSerializable
         }
         public void Information()
         {
-            Console.WriteLine( "nombre: " + name + " " + "apellido : " + lastname + " " + "edad: "
+            Console.WriteLine("nombre: " + name + " " + "apellido: " + lastname + " " + "edad: "
                 + age);
 
         }
-
-
+    }
 }
